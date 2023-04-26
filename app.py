@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
+from flask_ngrok import run_with_ngrok
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -12,5 +13,6 @@ def iris_prediction():
         return jsonify(request.args)
 
 
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+if _name_ == '_main_':
+    run_with_ngrok(app)
+    app.run()
